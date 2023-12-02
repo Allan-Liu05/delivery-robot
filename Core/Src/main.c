@@ -116,8 +116,8 @@ int main(void)
   HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
   HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
   
-  __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, speedControl(255));
-  __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, speedControl(255));
+  __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, speedControl(50));
+  __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, speedControl(50));
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -132,7 +132,7 @@ int main(void)
     calculateAngleGyro(&mpu6050);
 
     motorLeftFWD();
-    motorRightFWD();
+    motorRightRVS();
 
    
     HAL_GPIO_TogglePin(GPIOA, LD2_Pin);

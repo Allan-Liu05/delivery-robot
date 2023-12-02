@@ -1,4 +1,4 @@
-file "./build/DRIVER_CONTROL.elf"
+file "./build/gyroscope.elf"
 
 # Connect to texane stlink gdb server
 target extended-remote :4242

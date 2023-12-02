@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 1
+ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 1
   29:Core/Src/main.c **** /* USER CODE END Includes */
   30:Core/Src/main.c **** 
   31:Core/Src/main.c **** /* Private typedef -----------------------------------------------------------*/
-ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 2
+ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s 			page 2
 
 
   32:Core/Src/main.c **** /* USER CODE BEGIN PTD */
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 1
   86:Core/Src/main.c ****   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
   87:Core/Src/main.c ****   HAL_Init();
   88:Core/Src/main.c **** 
-ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 3
+ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s 			page 3
 
 
   89:Core/Src/main.c ****   /* USER CODE BEGIN Init */
@@ -151,8 +151,8 @@ ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 1
  116:Core/Src/main.c ****   HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
  117:Core/Src/main.c ****   HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
  118:Core/Src/main.c ****   
- 119:Core/Src/main.c ****   __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, speedControl(255));
- 120:Core/Src/main.c ****   __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, speedControl(255));
+ 119:Core/Src/main.c ****   __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, speedControl(50));
+ 120:Core/Src/main.c ****   __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, speedControl(50));
  121:Core/Src/main.c ****   /* USER CODE END 2 */
  122:Core/Src/main.c **** 
  123:Core/Src/main.c ****   /* Infinite loop */
@@ -167,7 +167,7 @@ ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 1
  132:Core/Src/main.c ****     calculateAngleGyro(&mpu6050);
  133:Core/Src/main.c **** 
  134:Core/Src/main.c ****     motorLeftFWD();
- 135:Core/Src/main.c ****     motorRightFWD();
+ 135:Core/Src/main.c ****     motorRightRVS();
  136:Core/Src/main.c **** 
  137:Core/Src/main.c ****    
  138:Core/Src/main.c ****     HAL_GPIO_TogglePin(GPIOA, LD2_Pin);
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 1
  143:Core/Src/main.c **** }
  144:Core/Src/main.c **** // IMPORTANT!!!!!!!
  145:Core/Src/main.c **** // D4 maps to GPIOB, GPIO_PIN_5
-ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 4
+ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s 			page 4
 
 
  146:Core/Src/main.c **** // D5 maps to GPIOB, GPIO_PIN_4
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 1
  200:Core/Src/main.c **** static void MX_I2C1_Init(void)
  201:Core/Src/main.c **** {
  202:Core/Src/main.c **** 
-ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 5
+ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s 			page 5
 
 
  203:Core/Src/main.c ****   /* USER CODE BEGIN I2C1_Init 0 */
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 1
  257:Core/Src/main.c ****     Error_Handler();
  258:Core/Src/main.c ****   }
  259:Core/Src/main.c ****   sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
-ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 6
+ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s 			page 6
 
 
  260:Core/Src/main.c ****   if (HAL_TIM_ConfigClockSource(&htim3, &sClockSourceConfig) != HAL_OK)
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 1
  314:Core/Src/main.c ****   huart2.Init.HwFlowCtl = UART_HWCONTROL_NONE;
  315:Core/Src/main.c ****   huart2.Init.OverSampling = UART_OVERSAMPLING_16;
  316:Core/Src/main.c ****   if (HAL_UART_Init(&huart2) != HAL_OK)
-ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 7
+ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s 			page 7
 
 
  317:Core/Src/main.c ****   {
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 1
   60              		.loc 1 338 3 view .LVU6
   61 001c 1A6B     		ldr	r2, [r3, #48]
   62 001e 02F00402 		and	r2, r2, #4
-ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 8
+ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s 			page 8
 
 
   63 0022 0192     		str	r2, [sp, #4]
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 1
  114              	.LBE7:
  115              		.loc 1 341 3 view .LVU26
  342:Core/Src/main.c **** 
-ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 9
+ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s 			page 9
 
 
  343:Core/Src/main.c ****   /*Configure GPIO pin Output Level */
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 1
  154              		.loc 1 358 3 is_stmt 1 view .LVU40
  155              		.loc 1 358 24 is_stmt 0 view .LVU41
  156 009e 0794     		str	r4, [sp, #28]
-ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 10
+ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s 			page 10
 
 
  359:Core/Src/main.c ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 1
  199              		.section	.text.setParam,"ax",%progbits
  200              		.align	1
  201              		.global	setParam
-ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 11
+ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s 			page 11
 
 
  202              		.syntax unified
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 1
  246              		.global	__aeabi_dadd
  247              		.global	__aeabi_d2iz
  248              		.section	.text.calculatePID,"ax",%progbits
-ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 12
+ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s 			page 12
 
 
  249              		.align	1
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 1
  299 0028 C4E90CAB 		strd	r10, [r4, #48]
   18:Core/Src/pid.c **** 
   19:Core/Src/pid.c ****     if (abs(pid->integral + pid->error*imu->dt) > pid->integralCap) {
-ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 13
+ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s 			page 13
 
 
  300              		.loc 2 19 5 is_stmt 1 view .LVU81
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 1
   26:Core/Src/pid.c **** 
   27:Core/Src/pid.c ****     pid->derivative = pid->kd*(pid->error-pid->pastError);
  348              		.loc 2 27 5 is_stmt 1 view .LVU94
-ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 14
+ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s 			page 14
 
 
  349              		.loc 2 27 26 is_stmt 0 view .LVU95
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 1
  398              		.section	.text.Error_Handler,"ax",%progbits
  399              		.align	1
  400              		.global	Error_Handler
-ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 15
+ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s 			page 15
 
 
  401              		.syntax unified
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 1
   26:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __CMSIS_GCC_H
   27:Drivers/CMSIS/Include/cmsis_gcc.h **** 
   28:Drivers/CMSIS/Include/cmsis_gcc.h **** /* ignore some GCC warnings */
-ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 16
+ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s 			page 16
 
 
   29:Drivers/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic push
@@ -958,7 +958,7 @@ ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 1
   83:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
   84:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __UNALIGNED_UINT16_WRITE(addr, val)    (void)((((struct T_UINT16_WRITE *)(void *)(addr))-
   85:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
-ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 17
+ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s 			page 17
 
 
   86:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT16_READ
@@ -1018,7 +1018,7 @@ ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 1
  140:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __disable_irq(void)
  417              		.loc 3 140 27 view .LVU110
  418              	.LBB9:
-ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 18
+ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s 			page 18
 
 
  141:Drivers/CMSIS/Include/cmsis_gcc.h **** {
@@ -1078,7 +1078,7 @@ ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 1
  212:Core/Src/main.c ****   hi2c1.Init.OwnAddress1 = 0;
  463              		.loc 1 212 24 is_stmt 0 view .LVU121
  464 000c 0023     		movs	r3, #0
-ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 19
+ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s 			page 19
 
 
  465 000e 8360     		str	r3, [r0, #8]
@@ -1138,7 +1138,7 @@ ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 1
  502 0034 A0860100 		.word	100000
  503              		.cfi_endproc
  504              	.LFE137:
-ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 20
+ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s 			page 20
 
 
  506              		.section	.text.MX_TIM3_Init,"ax",%progbits
@@ -1198,7 +1198,7 @@ ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 1
  250:Core/Src/main.c ****   htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
  551              		.loc 1 250 24 is_stmt 0 view .LVU149
  552 0026 4822     		movs	r2, #72
-ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 21
+ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s 			page 21
 
 
  553 0028 4260     		str	r2, [r0, #4]
@@ -1258,7 +1258,7 @@ ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 1
  589 0050 FFF7FEFF 		bl	HAL_TIM_PWM_Init
  590              	.LVL24:
  264:Core/Src/main.c ****   {
-ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 22
+ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s 			page 22
 
 
  591              		.loc 1 264 6 discriminator 1 view .LVU168
@@ -1318,7 +1318,7 @@ ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 1
  278:Core/Src/main.c ****   {
  628              		.loc 1 278 6 discriminator 1 view .LVU186
  629 007a A0B9     		cbnz	r0, .L30
-ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 23
+ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s 			page 23
 
 
  282:Core/Src/main.c ****   {
@@ -1378,7 +1378,7 @@ ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 1
  673              		.loc 1 284 5 view .LVU197
  674 00aa FFF7FEFF 		bl	Error_Handler
  675              	.LVL34:
-ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 24
+ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s 			page 24
 
 
  676              	.L33:
@@ -1438,7 +1438,7 @@ ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 1
  720              		.loc 1 313 3 is_stmt 1 view .LVU209
  313:Core/Src/main.c ****   huart2.Init.HwFlowCtl = UART_HWCONTROL_NONE;
  721              		.loc 1 313 20 is_stmt 0 view .LVU210
-ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 25
+ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s 			page 25
 
 
  722 0016 0C22     		movs	r2, #12
@@ -1498,7 +1498,7 @@ ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 1
  768              	.LCFI11:
  769              		.cfi_def_cfa_offset 88
  155:Core/Src/main.c ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
-ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 26
+ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s 			page 26
 
 
  770              		.loc 1 155 3 view .LVU221
@@ -1558,7 +1558,7 @@ ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 1
  161:Core/Src/main.c **** 
  812              		.loc 1 161 3 view .LVU234
  813 0040 0A68     		ldr	r2, [r1]
-ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 27
+ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s 			page 27
 
 
  814 0042 02F44042 		and	r2, r2, #49152
@@ -1618,7 +1618,7 @@ ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 1
  849              		.loc 1 174 3 is_stmt 1 view .LVU253
  174:Core/Src/main.c ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
  850              		.loc 1 174 30 is_stmt 0 view .LVU254
-ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 28
+ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s 			page 28
 
 
  851 0066 0723     		movs	r3, #7
@@ -1678,7 +1678,7 @@ ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 1
  888              	.LCFI12:
  889              		.cfi_remember_state
  890              		.cfi_def_cfa_offset 4
-ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 29
+ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s 			page 29
 
 
  891              		@ sp needed
@@ -1738,7 +1738,7 @@ ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 1
   81:Core/Src/main.c ****   /* USER CODE END 1 */
  940              		.loc 1 81 25 is_stmt 0 view .LVU279
  941 000c CDE91C23 		strd	r2, [sp, #112]
-ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 30
+ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s 			page 30
 
 
   87:Core/Src/main.c **** 
@@ -1793,21 +1793,21 @@ ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 1
  979 003e 2046     		mov	r0, r4
  980 0040 FFF7FEFF 		bl	HAL_TIM_PWM_Start
  981              	.LVL51:
- 119:Core/Src/main.c ****   __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, speedControl(255));
+ 119:Core/Src/main.c ****   __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, speedControl(50));
  982              		.loc 1 119 3 view .LVU292
- 983 0044 FF20     		movs	r0, #255
+ 983 0044 3220     		movs	r0, #50
  984 0046 FFF7FEFF 		bl	speedControl
  985              	.LVL52:
-ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 31
+ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s 			page 31
 
 
- 119:Core/Src/main.c ****   __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, speedControl(255));
+ 119:Core/Src/main.c ****   __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, speedControl(50));
  986              		.loc 1 119 3 is_stmt 0 discriminator 1 view .LVU293
  987 004a 2368     		ldr	r3, [r4]
  988 004c 5863     		str	r0, [r3, #52]
  120:Core/Src/main.c ****   /* USER CODE END 2 */
  989              		.loc 1 120 3 is_stmt 1 view .LVU294
- 990 004e FF20     		movs	r0, #255
+ 990 004e 3220     		movs	r0, #50
  991 0050 FFF7FEFF 		bl	speedControl
  992              	.LVL53:
  120:Core/Src/main.c ****   /* USER CODE END 2 */
@@ -1847,18 +1847,18 @@ ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 1
  1020 007a 6846     		mov	r0, sp
  1021 007c FFF7FEFF 		bl	calculateAngleGyro
  1022              	.LVL58:
- 134:Core/Src/main.c ****     motorRightFWD();
+ 134:Core/Src/main.c ****     motorRightRVS();
  1023              		.loc 1 134 5 view .LVU302
  1024 0080 FFF7FEFF 		bl	motorLeftFWD
  1025              	.LVL59:
  135:Core/Src/main.c **** 
  1026              		.loc 1 135 5 view .LVU303
- 1027 0084 FFF7FEFF 		bl	motorRightFWD
+ 1027 0084 FFF7FEFF 		bl	motorRightRVS
  1028              	.LVL60:
  138:Core/Src/main.c ****     HAL_Delay(1);
  1029              		.loc 1 138 5 view .LVU304
  1030 0088 2021     		movs	r1, #32
-ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 32
+ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s 			page 32
 
 
  1031 008a 1048     		ldr	r0, .L56+8
@@ -1918,7 +1918,7 @@ ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 1
  1076 00c2 00BF     		.align	2
  1077              	.L56:
  1078 00c4 00000000 		.word	hi2c1
-ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 33
+ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s 			page 33
 
 
  1079 00c8 00000000 		.word	htim3
@@ -1973,41 +1973,41 @@ ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 1
  1123              		.file 19 "Core/Inc/motor_driver.h"
  1124              		.file 20 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
  1125              		.file 21 "<built-in>"
-ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 34
+ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s 			page 34
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s:21     .text.MX_GPIO_Init:00000000 $t
-/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s:26     .text.MX_GPIO_Init:00000000 MX_GPIO_Init
-/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s:192    .text.MX_GPIO_Init:000000c4 $d
-/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s:200    .text.setParam:00000000 $t
-/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s:206    .text.setParam:00000000 setParam
-/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s:249    .text.calculatePID:00000000 $t
-/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s:255    .text.calculatePID:00000000 calculatePID
-/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s:399    .text.Error_Handler:00000000 $t
-/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s:405    .text.Error_Handler:00000000 Error_Handler
-/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s:437    .text.MX_I2C1_Init:00000000 $t
-/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s:442    .text.MX_I2C1_Init:00000000 MX_I2C1_Init
-/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s:500    .text.MX_I2C1_Init:0000002c $d
-/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s:1104   .bss.hi2c1:00000000 hi2c1
-/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s:507    .text.MX_TIM3_Init:00000000 $t
-/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s:512    .text.MX_TIM3_Init:00000000 MX_TIM3_Init
-/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s:679    .text.MX_TIM3_Init:000000b0 $d
-/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s:1097   .bss.htim3:00000000 htim3
-/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s:685    .text.MX_USART2_UART_Init:00000000 $t
-/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s:690    .text.MX_USART2_UART_Init:00000000 MX_USART2_UART_Init
-/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s:745    .text.MX_USART2_UART_Init:0000002c $d
-/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s:1090   .bss.huart2:00000000 huart2
-/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s:751    .text.SystemClock_Config:00000000 $t
-/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s:757    .text.SystemClock_Config:00000000 SystemClock_Config
-/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s:906    .text.SystemClock_Config:0000009c $d
-/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s:912    .text.main:00000000 $t
-/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s:918    .text.main:00000000 main
-/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s:1078   .text.main:000000c4 $d
-/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s:1087   .bss.huart2:00000000 $d
-/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s:1094   .bss.htim3:00000000 $d
-/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s:1101   .bss.hi2c1:00000000 $d
+/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s:21     .text.MX_GPIO_Init:00000000 $t
+/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s:26     .text.MX_GPIO_Init:00000000 MX_GPIO_Init
+/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s:192    .text.MX_GPIO_Init:000000c4 $d
+/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s:200    .text.setParam:00000000 $t
+/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s:206    .text.setParam:00000000 setParam
+/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s:249    .text.calculatePID:00000000 $t
+/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s:255    .text.calculatePID:00000000 calculatePID
+/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s:399    .text.Error_Handler:00000000 $t
+/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s:405    .text.Error_Handler:00000000 Error_Handler
+/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s:437    .text.MX_I2C1_Init:00000000 $t
+/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s:442    .text.MX_I2C1_Init:00000000 MX_I2C1_Init
+/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s:500    .text.MX_I2C1_Init:0000002c $d
+/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s:1104   .bss.hi2c1:00000000 hi2c1
+/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s:507    .text.MX_TIM3_Init:00000000 $t
+/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s:512    .text.MX_TIM3_Init:00000000 MX_TIM3_Init
+/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s:679    .text.MX_TIM3_Init:000000b0 $d
+/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s:1097   .bss.htim3:00000000 htim3
+/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s:685    .text.MX_USART2_UART_Init:00000000 $t
+/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s:690    .text.MX_USART2_UART_Init:00000000 MX_USART2_UART_Init
+/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s:745    .text.MX_USART2_UART_Init:0000002c $d
+/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s:1090   .bss.huart2:00000000 huart2
+/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s:751    .text.SystemClock_Config:00000000 $t
+/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s:757    .text.SystemClock_Config:00000000 SystemClock_Config
+/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s:906    .text.SystemClock_Config:0000009c $d
+/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s:912    .text.main:00000000 $t
+/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s:918    .text.main:00000000 main
+/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s:1078   .text.main:000000c4 $d
+/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s:1087   .bss.huart2:00000000 $d
+/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s:1094   .bss.htim3:00000000 $d
+/var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s:1101   .bss.hi2c1:00000000 $d
 
 UNDEFINED SYMBOLS
 HAL_GPIO_WritePin
@@ -2033,13 +2033,13 @@ HAL_TIM_PWM_Start
 speedControl
 readGyroData
 readAccelData
-ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//ccUEtnS7.s 			page 35
+ARM GAS  /var/folders/w0/_w50rr155tb53qvt2cy6pxh80000gn/T//cc5Hupoa.s 			page 35
 
 
 readTempData
 calculateAngleAccel
 calculateAngleGyro
 motorLeftFWD
-motorRightFWD
+motorRightRVS
 HAL_GPIO_TogglePin
 HAL_Delay
