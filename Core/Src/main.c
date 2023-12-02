@@ -26,6 +26,7 @@
 #include "mpu6050.h"
 #include "motor_driver.h"
 #include "pid.c"
+#include "kalman.c"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
